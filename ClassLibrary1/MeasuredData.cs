@@ -85,7 +85,6 @@ namespace ClassLibrary1
                 string error = null;
                 switch (field_name)
                 {
-                    case "a":
                     case "b":
                         if (b <= a)
                         {

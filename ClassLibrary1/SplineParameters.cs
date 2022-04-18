@@ -37,15 +37,12 @@ namespace ClassLibrary1
                             error = "Длина меньше 3";
                         }
                         break;
-                    case "a":
                     case "b":
                         if (b <= a)
                         {
                             error = "b < a";
                         }
                         break;
-                    case "x1":
-                    case "x2":
                     case "x3":
                         if ((x1 >= x2) || (x2 >= x3) || (x1 < a) || (x3 > b))
                         {

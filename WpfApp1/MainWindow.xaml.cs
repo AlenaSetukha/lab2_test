@@ -16,9 +16,15 @@ namespace WpfApp1
 
         private void Input_Error(object sender, ValidationErrorEventArgs e)
         {
+            if (e.Action == ValidationErrorEventAction.Removed)
+            {
+                v_data.Input_Error = false;
+                return;
+            }
             v_data.Input_Error = true;
-            MessageBox.Show($"Input Error: {e.Error.ErrorContent}", "Error is ", 
+            MessageBox.Show($"Input Error: {e.Error.ErrorContent}", "Error", 
                     MessageBoxButton.OK, MessageBoxImage.Error);
+
         }
 
         private void MeasuredData_CanExecute(object sender, CanExecuteRoutedEventArgs e)
@@ -35,7 +41,6 @@ namespace WpfApp1
         {
             try
             {
-                // Clear some text
                 First_derivative.Text = "";
                 Second_derivative.Text = "";
                 Integral1.Text = "";

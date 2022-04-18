@@ -77,9 +77,22 @@
                 AncestorType={x:Type local:MainWindow}}, Mode=TwoWay}" Width="228" Height="35">
             <TextBox.Text>
                 <MultiBinding Converter="{StaticResource SegmentConverter}">
-                    <Binding Path="a" NotifyOnValidationError="True"/>
-                    <Binding Path="b" NotifyOnValidationError="True"/>
-                    <Binding Path="n" NotifyOnValidationError="True"/> 
+                    <Binding Path="a" NotifyOnValidationError="True">
+                        <Binding.ValidationRules>
+                            <DataErrorValidationRule ValidatesOnTargetUpdated="False"></DataErrorValidationRule>
+                        </Binding.ValidationRules>
+                    </Binding>
+
+                    <Binding Path="b" NotifyOnValidationError="True">
+                        <Binding.ValidationRules>
+                            <DataErrorValidationRule ValidatesOnTargetUpdated="False"></DataErrorValidationRule>
+                        </Binding.ValidationRules>
+                    </Binding>
+                    <Binding Path="n" NotifyOnValidationError="True">
+                        <Binding.ValidationRules>
+                            <DataErrorValidationRule ValidatesOnTargetUpdated="False"></DataErrorValidationRule>
+                        </Binding.ValidationRules>
+                    </Binding>
                 </MultiBinding>
             </TextBox.Text>
         </TextBox>
@@ -101,9 +114,21 @@
                 Validation.Error="Input_Error">
             <TextBox.Text>
                 <MultiBinding Converter="{StaticResource SegmentConverter}">
-                    <Binding Path="a" NotifyOnValidationError="True"/>
-                    <Binding Path="b" NotifyOnValidationError="True"/>
-                    <Binding Path="n" NotifyOnValidationError="True"/>
+                    <Binding Path="a" NotifyOnValidationError="True">
+                        <Binding.ValidationRules>
+                            <DataErrorValidationRule ValidatesOnTargetUpdated="False"></DataErrorValidationRule>
+                        </Binding.ValidationRules>
+                    </Binding>
+                    <Binding Path="b" NotifyOnValidationError="True">
+                        <Binding.ValidationRules>
+                            <DataErrorValidationRule ValidatesOnTargetUpdated="False"></DataErrorValidationRule>
+                        </Binding.ValidationRules>
+                    </Binding>
+                    <Binding Path="n" NotifyOnValidationError="True">
+                        <Binding.ValidationRules>
+                            <DataErrorValidationRule ValidatesOnTargetUpdated="False"></DataErrorValidationRule>
+                        </Binding.ValidationRules>
+                    </Binding>
 
                 </MultiBinding>
             </TextBox.Text>
@@ -121,9 +146,21 @@
                 AncestorType={x:Type local:MainWindow}}, Mode=TwoWay}" Width="230" Height="50" >
             <TextBox.Text>
                 <MultiBinding Converter="{StaticResource LimitsConverter}">
-                    <Binding Path="x1" NotifyOnValidationError="True"/>
-                    <Binding Path="x2" NotifyOnValidationError="True"/>
-                    <Binding Path="x3" NotifyOnValidationError="True"/>
+                    <Binding Path="x1" NotifyOnValidationError="True">
+                        <Binding.ValidationRules>
+                            <DataErrorValidationRule ValidatesOnTargetUpdated="False"></DataErrorValidationRule>
+                        </Binding.ValidationRules>
+                    </Binding>
+                    <Binding Path="x2" NotifyOnValidationError="True">
+                        <Binding.ValidationRules>
+                            <DataErrorValidationRule ValidatesOnTargetUpdated="False"></DataErrorValidationRule>
+                        </Binding.ValidationRules>
+                    </Binding>
+                    <Binding Path="x3" NotifyOnValidationError="True">
+                        <Binding.ValidationRules>
+                            <DataErrorValidationRule ValidatesOnTargetUpdated="False"></DataErrorValidationRule>
+                        </Binding.ValidationRules>
+                    </Binding>
                 </MultiBinding>
             </TextBox.Text>
         </TextBox>
